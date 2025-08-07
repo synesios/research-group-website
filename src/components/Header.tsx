@@ -6,7 +6,7 @@ const Header: React.FC = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
+
     { name: 'Research', href: '#research' },
     { name: 'Publications', href: '#publications' },
     { name: 'Team', href: '#team' },
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 z-50">
+    <header className="bg-white dark:bg-gray-800 shadow-md fixed w-full top-0 z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-hku-green px-3 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 dark:text-gray-200 hover:text-hku-green dark:hover:text-hku-gold px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
                 {item.name}
               </a>
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-hku-green focus:outline-none focus:text-hku-green"
+              className="text-gray-700 dark:text-gray-200 hover:text-hku-green dark:hover:text-hku-gold focus:outline-none focus:text-hku-green dark:focus:text-hku-gold"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
@@ -56,12 +56,12 @@ const Header: React.FC = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mb-4">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 dark:bg-gray-700 rounded-lg mb-4 transition-colors duration-300">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-hku-green block px-3 py-2 text-base font-medium transition-colors duration-200"
+                  className="text-gray-700 dark:text-gray-200 hover:text-hku-green dark:hover:text-hku-gold block px-3 py-2 text-base font-medium transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

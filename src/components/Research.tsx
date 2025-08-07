@@ -53,7 +53,7 @@ const Research: React.FC = () => {
   ];
 
   return (
-    <section id="research" className="py-20 bg-gray-50">
+    <section id="research" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">Research Areas</h2>
@@ -66,7 +66,7 @@ const Research: React.FC = () => {
           {researchAreas.map((area, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
             >
               {/* Image Section */}
               <div 
@@ -82,16 +82,16 @@ const Research: React.FC = () => {
                   <div className={`w-10 h-10 bg-gradient-to-r ${area.color} rounded-lg flex items-center justify-center text-white mr-3`}>
                     {area.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900">{area.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">{area.title}</h3>
                 </div>
                 
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{area.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">{area.description}</p>
                 
                 <div>
-                  <h4 className="font-semibold text-gray-800 text-sm mb-2">Key Projects:</h4>
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-2">Key Projects:</h4>
                   <ul className="space-y-1">
                     {area.projects.map((project, projectIndex) => (
-                      <li key={projectIndex} className="text-sm text-gray-600 flex items-center">
+                      <li key={projectIndex} className="text-sm text-gray-600 dark:text-gray-300 flex items-center">
                         <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 flex-shrink-0"></div>
                         {project}
                       </li>

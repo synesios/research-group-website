@@ -285,7 +285,7 @@ const Publications: React.FC = () => {
   };
 
   return (
-    <section id="publications" className="py-20 bg-white">
+    <section id="publications" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">Publications</h2>
@@ -317,11 +317,11 @@ const Publications: React.FC = () => {
         {/* Filters */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <div className="flex-1">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Filter by Year</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Filter by Year</label>
             <select
               value={selectedYear}
               onChange={(e) => setSelectedYear(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             >
               {years.map(year => (
                 <option key={year} value={year}>
@@ -331,7 +331,7 @@ const Publications: React.FC = () => {
             </select>
           </div>
           <div className="flex-1">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Filter by Type</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Filter by Type</label>
             <select
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
@@ -353,7 +353,7 @@ const Publications: React.FC = () => {
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 flex-1">{pub.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 flex-1">{pub.title}</h3>
                     <div className="flex flex-col items-end ml-4">
                       <span className="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">
                         {pub.year}
@@ -362,19 +362,19 @@ const Publications: React.FC = () => {
                   </div>
                   
                   <div className="mb-3">
-                    <span className="text-gray-600">Authors: </span>
-                    <span className="text-gray-900">{pub.authors.join(', ')}</span>
+                    <span className="text-gray-600 dark:text-gray-400">Authors: </span>
+                    <span className="text-gray-900 dark:text-gray-200">{pub.authors.join(', ')}</span>
                   </div>
                   
                   <div className="mb-3">
-                    <span className="text-gray-600">Journal: </span>
-                    <span className="text-gray-900 font-medium">{pub.journal}</span>
+                    <span className="text-gray-600 dark:text-gray-400">Journal: </span>
+                    <span className="text-gray-900 dark:text-gray-200 font-medium">{pub.journal}</span>
                   </div>
                 </div>
               </div>
               
               <div className="flex flex-wrap gap-2 mt-4">
-                <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                <span className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">
                   {pub.category}
                 </span>
                 <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm capitalize">

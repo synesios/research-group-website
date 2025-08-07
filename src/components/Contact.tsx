@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
 
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">Contact Us</h2>
@@ -57,16 +57,16 @@ const Contact: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-hku-green">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center text-hku-green dark:text-green-300">
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">{info.title}</h4>
-                    <p className="text-gray-600 whitespace-pre-line">{info.content}</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{info.title}</h4>
+                    <p className="text-gray-600 dark:text-gray-300 whitespace-pre-line">{info.content}</p>
                   </div>
                 </div>
               ))}
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
 
           {/* Location Map */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Location Map</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Location Map</h3>
             <div className="rounded-lg h-96 overflow-hidden shadow-lg">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8534442094447!2d114.13707731495394!3d22.283194485336087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400f04884d5b7%3A0x5c3a8b8b8b8b8b8b!2sThe%20University%20of%20Hong%20Kong%2C%20Computer%20Science%20Department!5e0!3m2!1sen!2shk!4v1640000000000!5m2!1sen!2shk"
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
               ></iframe>
             </div>
             <div className="mt-4 text-center">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 <strong>The University of Hong Kong</strong><br />
                 Computer Science Department, Room 508, Building A<br />
                 Pokfulam Road, Hong Kong
